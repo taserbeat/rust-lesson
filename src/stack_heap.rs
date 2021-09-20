@@ -1,3 +1,11 @@
+// 線形リスト
+// Boxポインタを使うことで型のサイズが確定し、コンパイルが通るようになる。
+// https://doc.rust-lang.org/book/ch15-01-box.html
+enum List {
+    Node(i32, Box<List>),
+    Nil,
+}
+
 pub fn run() {
     println!("Here is stack_heap module");
 
@@ -24,4 +32,17 @@ pub fn run() {
     v1.append(&mut v3);
     println!("v1 is: {:?}", v1);
     println!("v3 is: {:?}", v3);
+
+    // Boxポインタ
+    let t1: (i64, String) = (10, String::from("hello")); // まずはtuppleを作る
+    println!("Stack address of t1 data is: {:p}", &t1);
+    println!("Heap memory address of t1.1 is: {:?}", t1.1.as_ptr());
+    println!("Length of t1.1 is: {}", t1.1.len());
+    println!("Capacity of t1.1 is: {}", t1.1.capacity());
+
+    let mut b1 = Box::new(t1); // tuppleからBoxポインタを作る
+    (*b1).1 += "world";
+    println!("b1 is: {} {}", b1.0, b1.1);
+    println!("Stack address of box pointer is: {:p}", &b1);
+    println!("Heap address of tuple data is {:p}", b1);
 }
