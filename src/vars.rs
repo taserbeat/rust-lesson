@@ -61,4 +61,10 @@ pub fn run() {
     *x1_ptr = 5;
     *y1_ptr = -5;
     println!("The value of t2 is: {:?}", t2);
+
+    // 配列
+    let a1 = [1, 2, 3, 4, 5];
+    let a2 = [0; 10];
+    println!("The value of a1: {:?}, {}", a1, a1[2]);
+    println!("The value of a2: {:?}, {}", a2, a2[3]);
 }
