@@ -1,0 +1,21 @@
+{
+    "editor.formatOnSave": false,
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust",
+        "editor.formatOnSave": true,
+    },
+    "[json]": {
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "vscode.json-language-features",
+      "editor.formatOnSave": true,
+    }
+}
