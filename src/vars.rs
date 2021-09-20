@@ -67,4 +67,31 @@ pub fn run() {
     let a2 = [0; 10];
     println!("The value of a1: {:?}, {}", a1, a1[2]);
     println!("The value of a2: {:?}, {}", a2, a2[3]);
+
+    // 文字列スライス
+    let s1 = "helloこんにちは挨拶"; // 26bytes (1byte * 5 + 3byte * 7)
+    let s2 = "hello";
+    println!("Stack address of s1 is: {:p}", &s1);
+    println!("Stack address of s2 is: {:p}", &s2);
+
+    println!("Static memory address of s1: {:?}", s1.as_ptr());
+    println!("Static memory address of s2: {:?}", s2.as_ptr());
+    println!("Length of s1 is: {}", s1.len());
+    println!("Length of s2 is: {}", s2.len());
+
+    let mut s3 = String::from("hello");
+    let mut s4 = String::from("helloworld");
+    println!("Stack address of s3 is: {:p}", &s3);
+    println!("Stack address of s4 is: {:p}", &s4);
+    println!("Heap memory address of s3: {:p}", s3.as_ptr());
+    println!("Heap memory address of s4: {:p}", s4.as_ptr());
+    println!("Length of s3 is: {}", s3.len());
+    println!("Length of s4 is: {}", s4.len());
+    println!("Capacity of s3 is: {}", s3.capacity());
+    println!("Capacity of s4 is: {}", s4.capacity());
+
+    s3.push_str("_new1");
+    s4.push_str("_new2");
+    println!("s3 is: {}", s3);
+    println!("s4 is: {}", s4);
 }
