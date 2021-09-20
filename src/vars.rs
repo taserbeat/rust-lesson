@@ -50,4 +50,15 @@ pub fn run() {
         println!("The value of y is: {}", y);
     }
     println!("The value of y is: {}", y);
+
+    // タプル型
+    let t1 = (500, 6.4, "tupple");
+    let (_x, _y, _z) = t1;
+    println!("The value of t1 is: {}, {}, {}", t1.0, t1.1, t1.2);
+
+    let mut t2 = ((0, 1), (2, 3));
+    let ((ref mut x1_ptr, ref mut y1_ptr), _) = t2;
+    *x1_ptr = 5;
+    *y1_ptr = -5;
+    println!("The value of t2 is: {:?}", t2);
 }
