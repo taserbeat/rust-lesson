@@ -38,6 +38,18 @@
 
   - これがメモリの二重解放エラーの例である
 
+## エラーハンドリング
+
+Rust では、デフォルトで `Option` 型と `Result` 型が存在する。
+
+- Option
+
+  - 値が存在しない(None)場合の例外処理を簡単に書くことができる。
+
+- Result
+
+  - 値がエラーが発生する可能性のある場合に簡単に書くことができる。
+
 # 参考文献
 
 - [Rust by Example 日本語版](https://doc.rust-jp.rs/rust-by-example-ja/index.html)
